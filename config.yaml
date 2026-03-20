@@ -1,0 +1,18 @@
+# ─────────────────────────────────────────────
+# 🐋 Polymarket Whale Tracker — Config
+# ─────────────────────────────────────────────
+
+# Minimum trade size in USD to trigger an alert
+min_trade_size: 500
+
+# How often to check for new trades (seconds)
+check_interval: 30
+
+telegram:
+  # Get a bot token from @BotFather on Telegram
+  bot_token: "YOUR_BOT_TOKEN"
+  # Your chat ID (use @userinfobot to find it)
+  chat_id: "YOUR_CHAT_ID"
+
+polymarket:
+  api_url: "https://clob.polymarket.com"
