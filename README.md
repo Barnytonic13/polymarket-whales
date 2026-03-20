@@ -94,6 +94,8 @@ Or edit `config.yaml` directly. Environment variables take priority.
 - ✅ Configurable minimum trade size (USD)
 - ✅ Colorized terminal output — YES in green, NO in red
 - ✅ Optional Telegram push alerts to any chat or channel
+- ✅ Optional Discord webhook alerts
+- ✅ Export whale trades to CSV or JSON (`--export whales.csv`)
 - ✅ Auto-resolves market names from condition IDs
 - ✅ Trade deduplication — no double alerts
 - ✅ Graceful handling of network errors and API timeouts
@@ -110,7 +112,13 @@ nohup python main.py > whales.log 2>&1 &
 
 **Custom config path:**
 ```bash
-python main.py /path/to/config.yaml
+python main.py --config /path/to/config.yaml
+```
+
+**Export whale trades to CSV or JSON:**
+```bash
+python main.py --export whales.csv
+python main.py --export whales.json
 ```
 
 **24/7 on a VPS:** Any $5/month VPS works — the script uses <10MB RAM.
@@ -121,11 +129,11 @@ python main.py /path/to/config.yaml
 
 Good first issues:
 
-- [ ] Discord / Slack webhook support
+- [x] Discord / Slack webhook support _(merged — thanks [@Deepak8858](https://github.com/Deepak8858)!)_
+- [x] Historical whale data export (CSV / JSON) _(merged — thanks [@Deepak8858](https://github.com/Deepak8858)!)_
 - [ ] Filter by specific market or category
 - [ ] Track and tag recurring whale wallets
 - [ ] Alert cooldown per market (avoid spam)
-- [ ] Historical whale data export (CSV / JSON)
 - [ ] Web dashboard (simple Flask/Streamlit UI)
 
 Open an issue or send a PR — both welcome.
@@ -185,8 +193,3 @@ AI agent that copies whale moves and trades Polymarket 24/7 — works from any c
 
 MIT · Built by [Virixlabs](https://virixlabs.com)
 
----
-
-## 📡 Live Whale Feed
-
-Join [@polymarketwhales_ai](https://t.me/polymarketwhales_ai) on Telegram — real-time whale alerts delivered to your feed automatically.
