@@ -131,9 +131,15 @@ Open an issue or send a PR — both welcome.
 
 ---
 
-## 📡 Live Whale Feed
+## 📡 Community & Live Whale Feed
 
-Follow **[@polymarketwhales_ai](https://t.me/polymarketwhales_ai)** on Telegram for a live feed of large trades — no setup, no code, just alerts.
+Join **[@polymarketwhales_ai](https://t.me/polymarketwhales_ai)** on Telegram:
+
+- 🐋 Live feed of large trades — real-time, no setup required
+- 💬 Community chat — discuss strategies, share setups, post your whale catches
+- 🤖 AI bot connected — ask questions, get market context, analyze trades
+
+Whether you're running the script or just lurking for signals — this is the place.
 
 ---
 
